@@ -3,6 +3,10 @@
         "express": {
             "url": "https://github.com/ygtzz/tmpl-express.git",
             "branch": "master"
+        },
+        "ex2": {
+            "url": "https://github.com/ygtzz/tmpl-express.git",
+            "branch": "master"
         }
     }
 }

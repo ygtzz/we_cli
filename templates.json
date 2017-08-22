@@ -1,0 +1,8 @@
+{
+    "tpl": {
+        "express": {
+            "url": "https://github.com/ygtzz/tmpl-express.git",
+            "branch": "master"
+        }
+    }
+}

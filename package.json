@@ -1,0 +1,16 @@
+{
+  "name": "we_cli",
+  "version": "0.0.1",
+  "description": "a project template build tool",
+  "main": "index.js",
+  "repository": "git@github.com:ygtzz/we_cli.git",
+  "author": "ygtzz <ygtzz@126.com>",
+  "license": "MIT",
+  "bin": {
+    "we": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "yargs": "^8.0.2"
+  }
+}

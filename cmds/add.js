@@ -6,17 +6,7 @@ var common = require('./common');
 
 exports.command = 'add'
 exports.desc = 'add a template by template name, git url and branch'
-exports.builder = {
-//   tplName: {
-    
-//   },
-//   gitUrl: {
-
-//   },
-//   branch:{
-
-//   }
-}
+exports.builder = {}
 exports.handler = function (argv) {
     var ques = [
         {

@@ -2,24 +2,32 @@ var exec = require('child_process').exec;
 var config = require('../templates');
 var chalk = require('chalk');
 var ora = require('ora');
+var inquirer = require('inquirer');
 
-exports.command = 'init <projectName> <tplName>'
+exports.command = 'init'
 exports.desc = 'init a project'
-exports.builder = {
-  projectName: {
-    
-  },
-  tplName: {
-
-  }
-}
+exports.builder = {}
 exports.handler = function (argv) {
-  // 处理用户输入
-  var tplName = argv.tplName;
-  var projectName = argv.projectName;
+  var ques = [
+    {
+        type:'input',
+        name:'projectName',
+        message:'project name'
+    },
+    {
+        type:'input',
+        name: 'tplName',
+        message:'template name'
+    }
+  ];
+  inquirer.prompt(ques).then(function(ans){
+      fInitTemplate(ans.projectName,ans.tplName);
+  });
+}
+
+function fInitTemplate(projectName,tplName){
   var gitUrl = '';
   var branch = '';
-
   if (!config.tpl[tplName]) {
       console.log(chalk.red('\n × Template does not exit!'))
       process.exit()

@@ -1,6 +1,7 @@
 var fs = require('fs');
 var config = require('../templates');
 var chalk = require('chalk');
+var common = require('common');
 
 exports.command = 'del <tplName>'
 exports.desc = 'delete a template'
@@ -24,8 +25,8 @@ exports.handler = function (argv) {
       if (err) console.log(err)
       console.log(chalk.green('Template deleted!'))
       console.log(chalk.grey('The last template list is: \n'))
-      console.log(config)
-      console.log('\n')
+      common.listTemplate(config);
+      console.log('')
       process.exit()
   })
 }

@@ -1,5 +1,5 @@
 var config = require('../templates');
-var prettyjson = require('prettyjson');
+var common = require('./common');
 
 exports.command = 'list'
 exports.desc = 'show all templates'
@@ -8,12 +8,7 @@ exports.builder = {
 }
 exports.handler = function (argv) {
   console.log('\ntemplate list:\n');
-  console.log(prettyjson.render(config.tpl,{
-    stringColor:'red', 
-    keysColor:'green',
-    dashColor:'yellow',
-    numberColor:'blue'
-  }));
-  console.log('');
+  common.listTemplate(config.tpl);
+  console.log('')
   process.exit();
 }

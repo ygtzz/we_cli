@@ -22,5 +22,5 @@ we init
 ## Cmds
 - `we add` add template by git url and git branch
 - `we list` show all templates
-- `we del`  delete template
+- `we del [tplName]`  delete a template
 - `we init` init project by a template

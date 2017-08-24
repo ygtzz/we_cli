@@ -43,7 +43,7 @@ function fInitTemplate(projectName,tplName){
   exec(cmdStr, (error, stdout, stderr) => {
     spinner.stop();
     if (error) {
-      console.log(error)
+      console.log(error.message)
       process.exit()
     }
     console.log(chalk.green('\n √ Generation success!'))
